@@ -7,11 +7,11 @@
             [(ngModel)]="searchText" (input)="search(200)" autocomplete="off" appAutofocus>
         <i class="fa fa-search"></i>
     </div>
-    <div class="right">
-        <button appBlurClick (click)="addCipher()" appA11yTitle="{{'addItem' | i18n}}">
-            <i class="fa fa-plus fa-lg fa-fw" aria-hidden="true"></i>
-        </button>
-    </div>
+    <!--<div class="right">-->
+        <!--<button appBlurClick (click)="addCipher()" appA11yTitle="{{'addItem' | i18n}}">-->
+            <!--<i class="fa fa-plus fa-lg fa-fw" aria-hidden="true"></i>-->
+        <!--</button>-->
+    <!--</div>-->
 </header>
 <content>
     <div class="no-items" *ngIf="(!ciphers || !ciphers.length) && !showSearching()">
@@ -33,47 +33,47 @@
                     (onSelected)="selectCipher($event)" (onDoubleSelected)="launchCipher($event)"></app-ciphers-list>
             </div>
         </div>
-        <div class="box list">
-            <div class="box-header">
-                {{'types' | i18n}}
-                <span class="flex-right">4</span>
-            </div>
-            <div class="box-content single-line">
-                <a href="#" class="box-content-row" appStopClick appBlurClick (click)="selectType(cipherType.Login)">
-                    <div class="row-main">
-                        <div class="icon"><i class="fa fa-fw fa-lg fa-globe"></i></div>
-                        <span class="text">{{'typeLogin' | i18n}}</span>
-                    </div>
-                    <span class="row-sub-label">{{typeCounts.get(cipherType.Login) || 0}}</span>
-                    <span><i class="fa fa-chevron-right fa-lg row-sub-icon"></i></span>
-                </a>
-                <a href="#" class="box-content-row" appStopClick appBlurClick (click)="selectType(cipherType.Card)">
-                    <div class="row-main">
-                        <div class="icon"><i class="fa fa-fw fa-lg fa-credit-card"></i></div>
-                        <span class="text">{{'typeCard' | i18n}}</span>
-                    </div>
-                    <span class="row-sub-label">{{typeCounts.get(cipherType.Card) || 0}}</span>
-                    <span><i class="fa fa-chevron-right fa-lg row-sub-icon"></i></span>
-                </a>
-                <a href="#" class="box-content-row" appStopClick appBlurClick (click)="selectType(cipherType.Identity)">
-                    <div class="row-main">
-                        <div class="icon"><i class="fa fa-fw fa-lg fa-id-card-o"></i></div>
-                        <span class="text">{{'typeIdentity' | i18n}}</span>
-                    </div>
-                    <span class="row-sub-label">{{typeCounts.get(cipherType.Identity) || 0}}</span>
-                    <span><i class="fa fa-chevron-right fa-lg row-sub-icon"></i></span>
-                </a>
-                <a href="#" class="box-content-row" appStopClick appBlurClick
-                    (click)="selectType(cipherType.SecureNote)">
-                    <div class="row-main">
-                        <div class="icon"><i class="fa fa-fw fa-lg fa-sticky-note-o"></i></div>
-                        <span class="text">{{'typeSecureNote' | i18n}}</span>
-                    </div>
-                    <span class="row-sub-label">{{typeCounts.get(cipherType.SecureNote) || 0}}</span>
-                    <span><i class="fa fa-chevron-right fa-lg row-sub-icon"></i></span>
-                </a>
-            </div>
-        </div>
+        <!--<div class="box list">-->
+            <!--<div class="box-header">-->
+                <!--{{'types' | i18n}}-->
+                <!--<span class="flex-right">4</span>-->
+            <!--</div>-->
+            <!--<div class="box-content single-line">-->
+                <!--<a href="#" class="box-content-row" appStopClick appBlurClick (click)="selectType(cipherType.Login)">-->
+                    <!--<div class="row-main">-->
+                        <!--<div class="icon"><i class="fa fa-fw fa-lg fa-globe"></i></div>-->
+                        <!--<span class="text">{{'typeLogin' | i18n}}</span>-->
+                    <!--</div>-->
+                    <!--<span class="row-sub-label">{{typeCounts.get(cipherType.Login) || 0}}</span>-->
+                    <!--<span><i class="fa fa-chevron-right fa-lg row-sub-icon"></i></span>-->
+                <!--</a>-->
+                <!--<a href="#" class="box-content-row" appStopClick appBlurClick (click)="selectType(cipherType.Card)">-->
+                    <!--<div class="row-main">-->
+                        <!--<div class="icon"><i class="fa fa-fw fa-lg fa-credit-card"></i></div>-->
+                        <!--<span class="text">{{'typeCard' | i18n}}</span>-->
+                    <!--</div>-->
+                    <!--<span class="row-sub-label">{{typeCounts.get(cipherType.Card) || 0}}</span>-->
+                    <!--<span><i class="fa fa-chevron-right fa-lg row-sub-icon"></i></span>-->
+                <!--</a>-->
+                <!--<a href="#" class="box-content-row" appStopClick appBlurClick (click)="selectType(cipherType.Identity)">-->
+                    <!--<div class="row-main">-->
+                        <!--<div class="icon"><i class="fa fa-fw fa-lg fa-id-card-o"></i></div>-->
+                        <!--<span class="text">{{'typeIdentity' | i18n}}</span>-->
+                    <!--</div>-->
+                    <!--<span class="row-sub-label">{{typeCounts.get(cipherType.Identity) || 0}}</span>-->
+                    <!--<span><i class="fa fa-chevron-right fa-lg row-sub-icon"></i></span>-->
+                <!--</a>-->
+                <!--<a href="#" class="box-content-row" appStopClick appBlurClick-->
+                    <!--(click)="selectType(cipherType.SecureNote)">-->
+                    <!--<div class="row-main">-->
+                        <!--<div class="icon"><i class="fa fa-fw fa-lg fa-sticky-note-o"></i></div>-->
+                        <!--<span class="text">{{'typeSecureNote' | i18n}}</span>-->
+                    <!--</div>-->
+                    <!--<span class="row-sub-label">{{typeCounts.get(cipherType.SecureNote) || 0}}</span>-->
+                    <!--<span><i class="fa fa-chevron-right fa-lg row-sub-icon"></i></span>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="box list" *ngIf="nestedFolders && nestedFolders.length">
             <div class="box-header">
                 {{'folders' | i18n}}
